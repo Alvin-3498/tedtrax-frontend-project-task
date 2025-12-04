@@ -15,6 +15,7 @@ import story2 from '@/app/assets/story2.jpg'
 import story3 from '@/app/assets/story3.jpg'
 import star from '@/app/assets/star.png'
 import Footer from './Footer'
+import { motion } from "motion/react"
 
 
 const roboto = Roboto({
@@ -62,19 +63,19 @@ const Home = () => {
           <div className='absolute top-0 py-10 md:py-30 lg:py-50'>
             <div className='flex flex-col gap-2'>
               <div className='md:-ml-20'>
-                <p id='main-title' className={`${roboto.className} text-lg text-white font-semibold pl-5 md:text-3xl md:pl-25 lg:pl-32 lg:text-4xl xl:text-5xl xl:pl-50 2xl:pl-52`}>Innovative IT Solutions for <br />
-                  Your Business</p>
+                <motion.p initial={{ opacity: 0, transform: "translateX(-50px)" }} animate={{ opacity: 1,transform: "translateX(0px)" }} transition={{ duration: 1 }} id='main-title' className={`${roboto.className} text-lg text-white font-semibold pl-5 md:text-3xl md:pl-25 lg:pl-32 lg:text-4xl xl:text-5xl xl:pl-50 2xl:pl-52`}>Innovative IT Solutions for <br />
+                  Your Business</motion.p>
               </div>
               <div>
-                <p id='sub-title' className={`${opensans.className} text-[12px] text-white pl-5 md:text-[15px] md:pl-5 lg:pl-12 lg:text-lg xl:pl-30 2xl:pl-32`}>Helping businesses thrive with modern technology solutions.</p>
+                <motion.p initial={{ opacity: 0, transform: "translateX(-50px)" }} animate={{ opacity: 1,transform: "translateX(0px)" }} transition={{ duration: 1,delay: 0.5 }}  id='sub-title' className={`${opensans.className} text-[12px] text-white pl-5 md:text-[15px] md:pl-5 lg:pl-12 lg:text-lg xl:pl-30 2xl:pl-32`}>Helping businesses thrive with modern technology solutions.</motion.p>
               </div>
 
               <div className='flex gap-5 ml-5 mt-3 md:ml-5 lg:ml-12 xl:ml-30 2xl:ml-32'>
                 <div>
-                  <button id='button1' className='text-[12px] text-blue-500 bg-white px-2 py-1 font-semibold rounded-xs cursor-pointer md:text-[15px] md:px-5 md:py-2 lg:text-[16] xl:text-lg'>Learn More</button>
+                  <motion.button initial={{ opacity: 0, transform: "translateY(50px)" }} animate={{ opacity: 1,transform: "translateX(0px)" }} transition={{ duration: 1,delay: 2 }} id='button1' className='text-[12px] text-blue-500 bg-white px-2 py-1 font-semibold rounded-xs cursor-pointer md:text-[15px] md:px-5 md:py-2 lg:text-[16] xl:text-lg'>Learn More</motion.button>
                 </div>
                 <div>
-                  <button id='button2' className='text-[12px] bg-[#0066FF] text-white font-semibold px-2 py-1 rounded-xs ring-1 ring-white cursor-pointer md:text-[15px] md:px-5 md:py-2 lg:text-[16px] xl:text-lg'>Get in Touch</button>
+                  <motion.button initial={{ opacity: 0, transform: "translateY(50px)" }} animate={{ opacity: 1,transform: "translateX(0px)" }} transition={{ duration: 1,delay: 2.5 }} id='button2' className='text-[12px] bg-[#0066FF] text-white font-semibold px-2 py-1 rounded-xs ring-1 ring-white cursor-pointer md:text-[15px] md:px-5 md:py-2 lg:text-[16px] xl:text-lg'>Get in Touch</motion.button>
                 </div>
               </div>
             </div>
@@ -86,10 +87,10 @@ const Home = () => {
           <div className='py-20'>
             <div className='px-5 lg:px-10 xl:px-30'>
               <div>
-                <p className={`${roboto.className} text-blue-500 text-[12px] md:text-[16px] lg:text-[17px] xl:text-lg 2xl:text-xl`}>What We Do</p>
+                <motion.p initial={{ opacity: 0, transform: "translateX(-50px)" }} animate={{ opacity: 1,transform: "translateX(0px)" }} transition={{ duration: 1 }} className={`${roboto.className} text-blue-500 text-[12px] md:text-[16px] lg:text-[17px] xl:text-lg 2xl:text-xl`}>What We Do</motion.p>
               </div>
               <div>
-                <p className={`${roboto.className} text-[16px] md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl`}>Perfect Solution For Your Business</p>
+                <motion.p initial={{ opacity: 0, transform: "translateX(-50px)" }} animate={{ opacity: 1,transform: "translateX(0px)" }} transition={{ duration: 1.5 }} className={`${roboto.className} text-[16px] md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl`}>Perfect Solution For Your Business</motion.p>
               </div>
             </div>
 
@@ -97,7 +98,7 @@ const Home = () => {
             <div className='grid grid-cols-1 gap-5 justify-evenly ml-3 mt-5 md:grid-cols-3 md:gap-5 md:-ml-5 md:px-5 lg:grid-cols-4 lg:px-10 lg:-ml-5 xl:grid-cols-5 xl:gap-60 xl:px-25 xl:mt-5 xl:ml-0 2xl:px-35 2xl:-ml-10'>
 
               {/* individual cards */}
-              <div className='w-[230px] h-[240px] rounded-xl bg-white ml-5 p-5 flex flex-col gap-7 ring-2 ring-gray-200 xl:h-[350px] xl:w-[280px]'>
+              <motion.div initial={{ opacity: 0, transform: "translateY(50px)" }} animate={{ opacity: 1,transform: "translateY(0px)" }} transition={{ duration: 1,delay: 2 }} className='w-[230px] h-[240px] rounded-xl bg-white ml-5 p-5 flex flex-col gap-7 ring-2 ring-gray-200 xl:h-[350px] xl:w-[280px]'>
                 <div>
                   <Image className='w-8 h-8 xl:w-12 xl:h-12' src={vector} alt='vector' />
                 </div>
@@ -116,10 +117,10 @@ const Home = () => {
                     <ArrowRightIcon className='w-3 h-3 !font-semibold text-blue-500 mt-0 xl:w-5 xl:h-5 xl:mt-0.5' />
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
               {/* individual cards */}
-              <div className='w-[230px] h-[240px] rounded-xl bg-white ml-5 p-5 flex flex-col gap-7 ring-2 ring-gray-200 xl:h-[350px] xl:w-[280px]'>
+              <motion.div initial={{ opacity: 0, transform: "translateY(50px)" }} animate={{ opacity: 1,transform: "translateY(0px)" }} transition={{ duration: 1,delay: 2.5 }} className='w-[230px] h-[240px] rounded-xl bg-white ml-5 p-5 flex flex-col gap-7 ring-2 ring-gray-200 xl:h-[350px] xl:w-[280px]'>
                 <div>
                   <Image className='w-8 h-8 xl:w-12 xl:h-12' src={vector1} alt='vector' />
                 </div>
@@ -138,10 +139,10 @@ const Home = () => {
                     <ArrowRightIcon className='w-3 h-3 !font-semibold text-blue-500 mt-0 xl:w-5 xl:h-5 xl:mt-0' />
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
               {/* individual cards */}
-              <div className='w-[230px] h-[240px] rounded-xl bg-white ml-5 p-5 flex flex-col gap-7 ring-2 ring-gray-200 xl:h-[350px] xl:w-[280px]'>
+              <motion.div initial={{ opacity: 0, transform: "translateY(50px)" }} animate={{ opacity: 1,transform: "translateY(0px)" }} transition={{ duration: 1,delay: 3 }} className='w-[230px] h-[240px] rounded-xl bg-white ml-5 p-5 flex flex-col gap-7 ring-2 ring-gray-200 xl:h-[350px] xl:w-[280px]'>
                 <div>
                   <Image className='w-8 h-8 xl:w-12 xl:h-12' src={vector2} alt='vector' />
                 </div>
@@ -160,10 +161,10 @@ const Home = () => {
                     <ArrowRightIcon className='w-3 h-3 !font-semibold text-blue-500 mt-0 xl:w-5 xl:h-5 xl:mt-0' />
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
               {/* individual cards */}
-              <div className='w-[230px] h-[240px] rounded-xl bg-white ml-5 p-5 flex flex-col gap-7 ring-2 ring-gray-200 xl:h-[350px] xl:w-[280px]'>
+              <motion.div initial={{ opacity: 0, transform: "translateY(50px)" }} animate={{ opacity: 1,transform: "translateY(0px)" }} transition={{ duration: 1,delay: 3.5 }} className='w-[230px] h-[240px] rounded-xl bg-white ml-5 p-5 flex flex-col gap-7 ring-2 ring-gray-200 xl:h-[350px] xl:w-[280px]'>
                 <div>
                   <Image className='w-8 h-8 xl:w-12 xl:h-12' src={vector3} alt='vector' />
                 </div>
@@ -182,14 +183,14 @@ const Home = () => {
                     <ArrowRightIcon className='w-3 h-3 !font-semibold text-blue-500 mt-0 xl:w-5 xl:h-5 xl:mt-0' />
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
 
         {/* aboutus-section */}
         <div className='bg-white px-8 py-15 flex flex-col gap-10 md:px-5 lg:flex-row xl:px-37 xl:-ml-13 2xl:px-50 2xl:-ml-25'>
-          <div className='flex flex-col gap-8 lg:px-5'>
+          <motion.div initial={{ opacity: 0, transform: "translateX(-50px)" }} animate={{ opacity: 1,transform: "translateX(0px)" }} transition={{ duration: 1,delay: 4}} className='flex flex-col gap-8 lg:px-5'>
             {/* about-us */}
             <div className='flex flex-col gap-3'>
               <div>
@@ -224,25 +225,25 @@ const Home = () => {
                 </ul>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* image */}
-          <div>
+          <motion.div initial={{ opacity: 0, transform: "translateX(50px)" }} animate={{ opacity: 1,transform: "translateX(0px)" }} transition={{ duration: 1,delay: 4}}>
             <Image className='w-full h-full object-cover rounded-lg lg:object-cover' src={aboutusimage} alt='aboutusimage' />
-          </div>
+          </motion.div>
         </div>
 
         {/* success-stories */}
         <div className='bg-gray-100 px-8 py-10 md:px-5 lg:pl-10 xl:px-30 2xl:px-35 2xl:-ml-6'>
           <div>
-            <p className={`${roboto.className} font-bold text-[16px] md:text-lg lg:text-xl xl:text-2xl`}>Success Stories</p>
+            <motion.p initial={{ opacity: 0, transform: "translateX(-50px)" }} animate={{ opacity: 1,transform: "translateX(0px)" }} transition={{ duration: 1,delay: 4.5 }} className={`${roboto.className} font-bold text-[16px] md:text-lg lg:text-xl xl:text-2xl`}>Success Stories</motion.p>
           </div>
 
           {/* story-cards */}
           <div className='mt-5 grid grid-cols-1 gap-5 md:grid-cols-3 lg:grid-cols-3 lg:gap-18 xl:gap-1 2xl:gap-0'>
 
             {/* individual-cards */}
-            <div className='w-[250px] h-[240px] bg-white ring-2 ring-gray-200 rounded-2xl md:w-[230px] md:h-[260px] lg:w-[270px] lg:h-[260px] xl:w-[380px] xl:h-[360px] xl:rounded-3xl'>
+            <motion.div initial={{ opacity: 0, transform: "translateY(50px)" }} animate={{ opacity: 1,transform: "translateY(0px)" }} transition={{ duration: 1,delay: 5 }} className='w-[250px] h-[240px] bg-white ring-2 ring-gray-200 rounded-2xl md:w-[230px] md:h-[260px] lg:w-[270px] lg:h-[260px] xl:w-[380px] xl:h-[360px] xl:rounded-3xl'>
               {/* image */}
               <div className='w-full h-[45%] xl:h-[50%]'>
                 <Image className='rounded-tl-2xl rounded-tr-2xl w-full h-full object-cover xl:rounded-tl-3xl xl:rounded-tr-3xl' src={story1} alt='story1' />
@@ -270,10 +271,10 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             {/* individual-cards */}
-            <div className='w-[250px] h-[240px] bg-white ring-2 ring-gray-200 rounded-2xl md:w-[230px] md:h-[260px] lg:w-[270px] lg:h-[260px] xl:w-[380px] xl:h-[360px] xl:rounded-3xl'>
+            <motion.div initial={{ opacity: 0, transform: "translateY(50px)" }} animate={{ opacity: 1,transform: "translateY(0px)" }} transition={{ duration: 1,delay: 5.5 }} className='w-[250px] h-[240px] bg-white ring-2 ring-gray-200 rounded-2xl md:w-[230px] md:h-[260px] lg:w-[270px] lg:h-[260px] xl:w-[380px] xl:h-[360px] xl:rounded-3xl'>
               {/* image */}
               <div className='w-full h-[40%] lg:h-[38%] xl:h-[50%]'>
                 <Image className='rounded-tl-2xl rounded-tr-2xl w-full h-full object-cover xl:rounded-tl-3xl xl:rounded-tr-3xl' src={story2} alt='story1' />
@@ -301,10 +302,10 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             {/* individual-cards */}
-            <div className='w-[250px] h-[240px] bg-white ring-2 ring-gray-200 rounded-2xl md:w-[230px] md:h-[260px] lg:w-[270px] lg:h-[260px] xl:w-[380px] xl:h-[360px] xl:rounded-3xl'>
+            <motion.div initial={{ opacity: 0, transform: "translateY(50px)" }} animate={{ opacity: 1,transform: "translateY(0px)" }} transition={{ duration: 1,delay: 6 }} className='w-[250px] h-[240px] bg-white ring-2 ring-gray-200 rounded-2xl md:w-[230px] md:h-[260px] lg:w-[270px] lg:h-[260px] xl:w-[380px] xl:h-[360px] xl:rounded-3xl'>
               {/* image */}
               <div className='w-full h-[45%] xl:h-[50%]'>
                 <Image className='rounded-tl-2xl rounded-tr-2xl w-full h-full object-cover xl:rounded-tl-3xl xl:rounded-tr-3xl' src={story3} alt='story1' />
@@ -332,7 +333,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
           </div>
         </div>
